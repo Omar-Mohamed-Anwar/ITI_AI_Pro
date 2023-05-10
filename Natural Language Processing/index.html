@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dialect detection</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		h1 {
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+		form {
+			display: inline-block;
+			text-align: left;
+		}
+		input[type=text] {
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			width: 300px;
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<h1>Dialect Detection</h1>
+	<form method="POST" action="{{url_for('predict')}}">
+		<input type="text" id="text" name="text"><br>
+		<br>
+		<input type="submit" value="predict">
+	</form>
+	<br>
+	<h1>{{predictions_text}}</h1>
+</body>
+</html>
+
